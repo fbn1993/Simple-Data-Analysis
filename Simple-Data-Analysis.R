@@ -1,6 +1,7 @@
 str(beaver2)
 transformed_beaver_data <- transform(beaver2, activ = factor(activ, labels = c("no", "yes")))
 library("lattice")
+
 #The histigram uses one sided formula so we don't specify anything left of~
 histogram(~temp | activ, data = transformed_beaver_data)
 #Quantiles-quantile (QQ) plot allows us to compare the quantiles of both samples
